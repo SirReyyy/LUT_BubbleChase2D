@@ -35,7 +35,7 @@ public class BubbleSpawnerScript : MonoBehaviour
                     bubblePrefab = greenPrefab;
                 }
 
-                GameObject bubble = Instantiate(bubblePrefab);
+                GameObject bubble = Instantiate(bubblePrefab, Vector3.zero, Quaternion.identity);
                 bubble.transform.position = transform.position + new Vector3(Random.Range(bounds_XY, -bounds_XY), Random.Range(bounds_XY, -bounds_XY), 0);
                 bubble.transform.parent = bubbleHolder;
 
